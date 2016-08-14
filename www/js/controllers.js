@@ -1,6 +1,26 @@
 angular.module('starter.controllers', [])
+.controller('DashCtrl', function($scope,$cordovaImagePicker,$ionicPlatform) {
+  $scope.getImage = function(){
+        $ionicPlatform.ready(function() {
+          var options = {
+           maximumImagesCount: 1,
+           width: 400,
+           height: 400,
+           quality: 80
+          };
+          $cordovaImagePicker.getPictures(options)
+            .then(function (results) {
+              for (var i = 0; i < results.length; i++) {
+                console.log(results[i]);
+                $scope.image=results[i];
+              }
+            }, function(error) {
+              // error getting photos
+            });
+        });
+  }
 
-.controller('DashCtrl', function($scope) {})
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
