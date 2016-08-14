@@ -9,9 +9,9 @@ angular.module('starter.controllers', [])
         $ionicPlatform.ready(function() {
           var options = {
            maximumImagesCount: 1,
-           width: 800,
+           width: 500,
            height: 0,
-           quality: 100
+           quality: 80
           };
           $cordovaImagePicker.getPictures(options)
             .then(function (results) {
