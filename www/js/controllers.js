@@ -1,14 +1,17 @@
 angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope,$cordovaImagePicker,$ionicPlatform) {
-  
+  // don't forget to link js and css (crop plugin) in index.html and add dependencie in app.js
   $scope.getImage = function(){
         $scope.data= {image:""};
+        $scope.data.image ='';
+        $scope.myCroppedImage='';
+
         $ionicPlatform.ready(function() {
           var options = {
            maximumImagesCount: 1,
-           width: 200,
+           width: 800,
            height: 0,
-           quality: 50
+           quality: 100
           };
           $cordovaImagePicker.getPictures(options)
             .then(function (results) {
@@ -26,6 +29,8 @@ angular.module('starter.controllers', [])
             });
         });
   }
+
+
   $scope.toDataUrl = function(src, callback, outputFormat) {
       var img = new Image();
       img.crossOrigin = 'Anonymous';
