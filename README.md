@@ -17,7 +17,7 @@
 
 ### app.js
 	var myAppModule = angular.module('MyApp', ['ngImgCrop']);
-### put those functions in your controller
+### controller.js (put this in your controller)
         $scope.getImage = function(){
               $scope.data= {image:""};
               $scope.data.image ='';
