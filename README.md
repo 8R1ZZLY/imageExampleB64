@@ -67,3 +67,7 @@
               img.src = src;
             }
           }
+### yourhtml.html
+        <div class="cropArea" style="width:100%;height:400px;">
+        <img-crop  style="width:100%;" image="data.image" result-image="myCroppedImage"></img-crop>
+        <img ng-src="{{myCroppedImage}}" />
