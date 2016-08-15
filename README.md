@@ -6,7 +6,7 @@
     bower install ngImgCrop
     cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
 
-## If you want to integrate this in a project:
+## If you want to integrate this in a existing project:
     bower install ngCordova
     bower install ngImgCrop
     cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
