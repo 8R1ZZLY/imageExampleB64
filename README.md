@@ -6,12 +6,12 @@
     bower install ngImgCrop
     cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
 
-## If you want to integrate this in a existing project:
+# If you want to integrate this in a existing project:
     bower install ngCordova
     bower install ngImgCrop
     cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
     
-### index.html (check the path of the dependencies)
+## index.html (check the path of the dependencies)
     ...
     ...
     <!-- ionic/angularjs js -->
@@ -29,9 +29,9 @@
     <link rel="stylesheet" type="text/css" href="lib/ng-img-crop/compile/minified/ng-img-crop.css">
     ...
     ...
-### app.js
+## app.js
 	var myAppModule = angular.module('MyApp', ['ngImgCrop',ngCordova]); //add dependencies
-### controller.js (put this in your controller)
+## controller.js (put this in your controller)
         $scope.getImage = function(){
               $scope.data= {image:""};
               $scope.data.image ='';
@@ -81,7 +81,7 @@
               img.src = src;
             }
           }
-### yourhtml.html
+## yourhtml.html
         <div class="cropArea" style="width:100%;height:400px;">
         <img-crop  style="width:100%;" image="data.image" result-image="myCroppedImage"></img-crop>
         <img ng-src="{{myCroppedImage}}" />
