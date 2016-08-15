@@ -1,22 +1,36 @@
 # imageExampleB64
 
-## instalation:
+## installation of this boilerplate:
 
     ionic state restore
     bower install ngCordova
     bower install ngImgCrop
     cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
 
-## link:
+## first installation:
+    bower install ngCordova
+    bower install ngImgCrop
+    cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
     
 ### index.html
+    ...
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-    <script src="angular.js"></script>
-	<script src="ng-img-crop.js"></script>
-	<link rel="stylesheet" type="text/css" href="ng-img-crop.css">
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="lib/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/ng-img-crop/compile/minified/ng-img-crop.css">
+    ...
 
 ### app.js
-	var myAppModule = angular.module('MyApp', ['ngImgCrop']);
+	var myAppModule = angular.module('MyApp', ['ngImgCrop',ngCordova]); //add dependencies
 ### controller.js (put this in your controller)
         $scope.getImage = function(){
               $scope.data= {image:""};
