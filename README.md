@@ -14,6 +14,7 @@
     
 ### index.html
     ...
+    ...
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
@@ -28,7 +29,7 @@
     <script src="lib/ng-img-crop/compile/minified/ng-img-crop.js"></script>
     <link rel="stylesheet" type="text/css" href="lib/ng-img-crop/compile/minified/ng-img-crop.css">
     ...
-
+    ...
 ### app.js
 	var myAppModule = angular.module('MyApp', ['ngImgCrop',ngCordova]); //add dependencies
 ### controller.js (put this in your controller)
