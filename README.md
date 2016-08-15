@@ -79,6 +79,7 @@
             };
             img.src = src;
             if (img.complete || img.complete === undefined) {
+              //This is a default value so you can replace the content of this variable to fit with your application
               img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
               img.src = src;
             }
