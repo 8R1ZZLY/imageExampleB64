@@ -1,18 +1,17 @@
 # imageExampleB64
 
 ## installation of this boilerplate:
-
     ionic state restore
     bower install ngCordova
     bower install ngImgCrop
     cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
 
-## first installation:
+## If you want to integrate this in a project:
     bower install ngCordova
     bower install ngImgCrop
     cordova plugin add https://github.com/wymsee/cordova-imagePicker.git
     
-### index.html
+### index.html (check the path of the dependencies)
     ...
     ...
     <!-- ionic/angularjs js -->
